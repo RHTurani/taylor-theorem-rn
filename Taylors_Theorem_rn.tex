@@ -1,0 +1,27 @@
+\documentclass[letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\title{Taylor's Theorem in $\mathbb{R}^n$}
+\author{R. H. Turani}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+Let $\alpha = (\alpha_1, \alpha_2, \ldots, \alpha_n)$ be the set of all variables represented by the multi-index $\alpha$,
+such that $\alpha \in \mathbb{N}_0^n$, and let $H = (h_1, h_2, \ldots, h_n)$ be the set representing the variation of indices,
+where $|P-P_0|<\delta$ is a neighborhood of $P_0$, contained in the open domain $D \subset \mathbb{R}^n$, and let 
+$P(\alpha) = (\alpha + H) \therefore P(a) = (\alpha_1 + h_1, \alpha_2 + h_2, \ldots, \alpha_n + h_n)$, where $P(a) \in D$.
+
+Let the radius of the neighborhood be $\delta = \sqrt{|H|^2}$, where $|H|^2 = (h_1^2 + h_2^2 + \ldots + h_n^2)$. Consider the function
+$f: D \subset \mathbb{R}^n \to \mathbb{R}$, $F(t) = f(x_{1,0}+h_1t, x_{2,0}+h_2t, \ldots, x_{n,0}+h_nt)$, where $t$ belongs to the open interval
+$I_\epsilon = {t: -\epsilon < t < 1+\epsilon}\supset[0,1]$.
+
+When \textit{t} varies in the interval $[0,1]$, the point $P_t=P_0 + t(P-P_0)$ varies along a segment $AB$, excluding the endpoints $A$ and $B$, and containing the 
+segment $PP_0$. Under these conditions, it is clear that the Maclaurin expansion of order $n$ for the function $F(t)$ holds:
+\begin{equation}
+ f(P) = \sum_{|\alpha| \leq n} \frac{D^\alpha f(P_0)}{\alpha!} (P-P_0)^\alpha + R_n(P)
+\end{equation}
+where $R_n(P)$ is the remainder of the expansion, with $R \rightarrow 0$ as $P \rightarrow P_0$, that is, $\lim_{P \to P_0} \frac{R_n(P)}{|P-P_0|^n} = 0$.
+\end{document}
